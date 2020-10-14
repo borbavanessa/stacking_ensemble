@@ -1,0 +1,48 @@
+Correct Prediction per Label: [0.7613637 0.5596591 0.5823864]
+Exact Match Ratio: 0.2585227272727273
+Hamming Loss: 0.36553030303030304
+Confusion Matrix: 
+[[[207  57]
+  [ 27  61]]
+
+ [[141  35]
+  [120  56]]
+
+ [[149  27]
+  [120  56]]]
+=== Model Performance - Multi-label Metrics ===
+              precision    recall  f1-score   support
+
+     control       0.52      0.69      0.59        88
+     anxiety       0.62      0.32      0.42       176
+  depression       0.67      0.32      0.43       176
+
+   micro avg       0.59      0.39      0.47       440
+   macro avg       0.60      0.44      0.48       440
+weighted avg       0.62      0.39      0.46       440
+ samples avg       0.34      0.41      0.36       440
+
+
+
+=== Model Performance - Single-label Metrics ===
+control
+[[207  57]
+ [ 27  61]]
+anxiety
+[[257   7]
+ [ 87   1]]
+depression
+[[264   0]
+ [ 88   0]]
+anxiety,depression
+[[210  54]
+ [ 59  29]]
+
+                      precision    recall  f1-score   support
+
+             control       0.52      0.69      0.59        88
+             anxiety       0.12      0.01      0.02        88
+          depression       0.00      0.00      0.00        88
+  anxiety,depression       0.35      0.33      0.34        88
+
+

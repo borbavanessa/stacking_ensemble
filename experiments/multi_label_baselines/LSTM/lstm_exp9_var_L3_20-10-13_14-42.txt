@@ -1,0 +1,76 @@
+
+=== DATASET INFORS ===
+Dataset type: SMHD
+Total Registers by group (train, test, valid): 2640
+Embedding Type: 6
+Use Embedding: 3
+File Custom Word Embedding: SMHD-CBOW-A-D-ADUsers-300.bin
+Remove stopwords: False
+Use binary function: True
+Posts order: False
+User order: False
+Tokenizer Type (WE - Word Embedding, OH - OneHot): WE
+Total GPUs: 2
+Devices available: 
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 13343804368072990304
+, name: "/device:XLA_CPU:0"
+device_type: "XLA_CPU"
+memory_limit: 17179869184
+locality {
+}
+incarnation: 15205703807897159138
+physical_device_desc: "device: XLA_CPU device"
+]
+=== ADDITIONAL INFORS ===
+Experiment Specific Configuration: SMHD_ml_gl_2640_lstm_exp9_var_L3_N16_B40_E32_D0.2_ET_6_UE_3_EF_SMHD-CBOW-A-D-ADUsers-300_glorot
+Model: "sequential_9"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+emb_exp9_ET_6_UE_3_EF_CBOW-A (None, None, 300)         1500000   
+_________________________________________________________________
+dense_1_exp9_ET_6_UE_3_EF_CB (None, None, 16)          20288     
+_________________________________________________________________
+dense_2_exp9_ET_6_UE_3_EF_CB (None, None, 16)          2112      
+_________________________________________________________________
+dense_3_exp9_ET_6_UE_3_EF_CB (None, 16)                2112      
+_________________________________________________________________
+dense_4_exp9_ET_6_UE_3_EF_CB (None, 3)                 51        
+=================================================================
+Total params: 1,524,563
+Trainable params: 24,563
+Non-trainable params: 1,500,000
+_________________________________________________________________
+Correct Prediction per Label: [0.62954545 0.6272727  0.6181818 ]
+Exact Match Ratio: 0.3081818181818
+Hamming Loss: 0.3903030303030304
+Confusion Matrix: 
+[[[136  75]
+  [ 55  86]]
+
+ [[225  39]
+  [125  51]]
+
+ [[230  34]
+  [134  42]]]
+=== Model Performance - Multi-label Metrics ===
+              precision    recall  f1-score   support
+
+     control       0.53      0.61      0.57        88
+     anxiety       0.57      0.29      0.38       176
+  depression       0.55      0.24      0.33       176
+
+   micro avg       0.54      0.38      0.45       440
+   macro avg       0.55      0.38      0.43       440
+weighted avg       0.55      0.38      0.43       440
+ samples avg       0.36      0.40      0.37       440
+
+
+=== Model Performance - Single-label Metrics ===
+                      precision    recall  f1-score   support
+  anxiety,depression       0.30      0.27      0.29        88
